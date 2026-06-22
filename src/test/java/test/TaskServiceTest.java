@@ -1,7 +1,9 @@
 /* Author: Ben Usnick
- * Date: 8/5/2025
- * Course ID: CS 320
- * Description: Tests for TaskService.java to ensure appropriate task manipulation
+ * Date: 6/20/2026
+ * Course ID: CS 499 - Capstone
+ * Description: Unit testing for TaskService class. Verifies that
+ * tasks can be created, retrieved, updated, and deleted through 
+ * the service layer.
  */
 
 package test;
@@ -17,13 +19,6 @@ import org.junit.jupiter.api.Test;
 
 class TaskServiceTest {
 
-	// ENHANCMMENT Category Two
-	// Remove need for test ordering.
-	// Refactor tests by making addTask in TaskService.Java return a Task
-	// object. This allows for use of getters and removes reliance on hardcoded tests.
-
-	// ENHANCEMENT Category Two
-	// refactor test for adding a task
 	@Test
 	void testAddTask() throws SQLException {
 
