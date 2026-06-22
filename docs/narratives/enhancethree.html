@@ -7,11 +7,21 @@
 </head>
 
 <body style="font-family: Arial, sans-serif; max-width: 900px; margin: auto; line-height: 1.6;">
+    
+    <h1>Enhancement One</h1>
+
     <p>
         The artifact being used is a project from earlier in my coursework, CS – 320 Software testing. The artifact handles the ability to add contacts, tasks, and appointments and store them to an ArrayList. Methods are present to allow for retrieving, deleting, and updating the fields of each of the three classes. These methods are in the model classes and service classes. As it was a software testing course, there are also testing classes for each of the model and service classes using JUnit testing.
-This item was selected because I saw it as a surface level program which had a significant amount of room to demonstrate growth. The code needing refactoring throughout, a non-persistent ArrayList was used instead of a relational database, and the testing performed was limited. Ultimately it was a shell of a program that could be updated to serve a valuable purpose and demonstrate a wide variety of skills to put in my ePortfolio. Specifically in this milestone the three model and three service classes were refactored as well as adding a validator class. This validator class hold methods for validation that is used in the model and service classes, improving readability, maintainability, and provide a level of abstraction.
-I have met the course outcomes that I have intended to meet by this point. As I was working on refactoring the code I was unsure which week I should implement it, but plan to meet the course outcomes in the following weeks. As far as what I’ve learned while enhancing and modifying the artifact, I can say that I have no learned like this so far in this program. The prompt is wonderfully vague enough to where I am the one who is making the rules about what I needs to be done. It is not just simply completing a task like my previous coursework has been, but it is first defining the task. Just this aspect in itself has made it feel like I’ve learned so much in just these few weeks. The necessity to review and understand where something is lacking, then understand multiple solutions to correct the problem, and then finalize which solutions work best together and for the goal of the artifact. I’m definitely having to look a lot of things up, but I feel like my reasoning has grown significantly. ‘m sure there are still items of this artifact that I am overlooking, and that may be one of my biggest challenges. I still have difficulty seeing a program that works, and thinking of ways that I can improve it as most of my studies haven’t challenged me in this way.
     </p>
+
+    <p>
+        This item was selected because I saw it as a surface level program which had a significant amount of room to demonstrate growth. The code needing refactoring throughout, a non-persistent ArrayList was used instead of a relational database, and the testing performed was limited. Ultimately it was a shell of a program that could be updated to serve a valuable purpose and demonstrate a wide variety of skills to put in my ePortfolio. Specifically in this milestone a Data Access Object (DAO) class was created for each of the contact, task, and appointment classes to be bridge between the application and database side of the program. The SQL coding for reading and writing to the database was performed here. Secondary to this, the service classes were able to be updated, removing the Big O notation of O(n) and being able to use the database’s logic to improve it to O(log n) while providing improve readability by separating responsibilities between classes.
+    </p>
+
+    <p>
+        I met the course outcomes that I had anticipated in this step. I had actually anticipated this step to be a crucial piece in tying together the whole program as some Enhancements from earlier needed to be revised or even removed once this step was completed. What I didn’t anticipate was how much work it would actually take to complete this step, and as before, found myself really learning the how’s and why’s behind what I was doing. I feel like the logic and function was not terrible tricky, but much like last week, I felt like I learned a great deal about designing the program up to standards so it can be better maintained and updated in the future. I still look forward to integrating GitHub Actions next week as well as adding and updating some testing with the additions of the DAO classes.
+    </p>
+
 </body>
 
 </html>

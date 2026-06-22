@@ -12,7 +12,14 @@
     <h1>Appointment</h1>
 
     <p>
-        here i fixed the appointments
+        The top section of code is from the original artifact and the bottom section of code
+        is from the enhanced file. Both are the AppointmentService.java file, though the top
+        section has alot more going on. A for loop is used to iterate through the entire
+        ArrayList until an apptID was foudn that matched, a big O complexity of O(n). With
+        the SQLite database, the index is often O(log n). The addition of a database allows
+        for use of this index and improving search time. Also, adding an AppointmentDAO.java
+        file allows us to abstract the logic there, keeping this Service class very clean, only
+        needing to call a return of dao.getAppt(apptID).
     </p>
 
     <img src="images/appointments.png" width="700" alt="Appointments">
