@@ -1,3 +1,11 @@
+/* Author: Ben Usnick
+ * Date: 6/20/2026
+ * Course ID: CS 499 - Capstone
+ * Description: Unit testing for ContactDAO class. Verify database
+ * operations including inserting, updating, and deleting records in the
+ * database
+ */
+
 package test;
 
 import contact.Contact;

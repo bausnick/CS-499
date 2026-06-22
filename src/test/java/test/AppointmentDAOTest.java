@@ -27,7 +27,7 @@ public class AppointmentDAOTest extends BaseDBTest{
         AppointmentDAO dao = new AppointmentDAO();
         Appointment appt = new Appointment(
             "123",
-            new Date(100000),
+            futureDate(50000), // date that is always in the future
             "DAO Test",
             null
         );
@@ -47,7 +47,7 @@ public class AppointmentDAOTest extends BaseDBTest{
         AppointmentDAO dao = new AppointmentDAO();
         Appointment appt = new Appointment(
             "456",
-            new Date(100000),
+            futureDate(50000), // date that is always in the future
             "To Be Deleted",
             null
         );
@@ -67,14 +67,15 @@ public class AppointmentDAOTest extends BaseDBTest{
         AppointmentDAO dao = new AppointmentDAO();
         Appointment appt = new Appointment(
             "789",
-            new Date(100000),
+            futureDate(50000), // date that is always in the future
             "Update Date Test",
             null
         );
 
         dao.addAppt(appt);
 
-        Date newDate = new Date(999999999);
+        // new date is further in the future
+        Date newDate = new Date(System.currentTimeMillis() + 100000);
 
         dao.updateDate("789", newDate);
 
@@ -92,7 +93,7 @@ public class AppointmentDAOTest extends BaseDBTest{
         AppointmentDAO dao = new AppointmentDAO();
         Appointment appt = new Appointment(
             "111",
-            new Date(100000),
+            futureDate(50000), // date that is always in the future
             "Old Desc",
             null
         );

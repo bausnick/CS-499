@@ -55,10 +55,8 @@ public class AppointmentTest {
 	// Verify correct exception is thrown for date in the past
 	void testPastDate() {
 
-		@SuppressWarnings("deprecation")
-
 		// create date clearly in past
-		Date past = new Date(1500, 1, 1); 
+		Date past = new Date(System.currentTimeMillis() - 50000);
 
 		Exception e = assertThrows(
 			IllegalArgumentException.class,

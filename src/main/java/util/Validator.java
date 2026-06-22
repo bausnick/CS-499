@@ -1,3 +1,9 @@
+/* Author: Ben Usnick
+ * Date: 6/20/2026
+ * Course ID: CS 499 - Capstone
+ * Description: Handles validations for different fields
+ */
+
 package util;
 
 import java.util.Date;

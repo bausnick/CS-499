@@ -10,6 +10,7 @@
 package appointment;
 
 import java.util.Date;
+
 import util.Validator;
 
 public class Appointment {
@@ -79,5 +80,28 @@ public class Appointment {
 	// Associate this appointment with a contact
 	public void setContactID(String  contactID) {
 		this.contactID = contactID;
+	}
+
+	// Appointment objects are considered equal if they share a UUID. This lets
+	// comparisons between objects from database and memory to be made
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+
+		if (obj == null || getClass() != obj.getClass()) {
+			return false;
+		}
+
+		Appointment other = (Appointment) obj;
+		return apptID.equals(other.apptID);
+	}
+
+	// hashCode needs to be overridden when equals is overridden. This
+	// uses apptID so the objects behave correctly
+	@Override
+	public int hashCode() {
+		return apptID.hashCode();
 	}
 }

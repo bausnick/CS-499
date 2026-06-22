@@ -81,7 +81,7 @@ public class Task {
 		this.contactID = contactID;
 	}
 
-	// Task object are considered equal if they share a UUID. This lets
+	// Task objects are considered equal if they share a UUID. This lets
 	// comparisons between objects from database and memory to be made
 	@Override
 	public boolean equals(Object obj) {
@@ -103,5 +103,4 @@ public class Task {
 	public int hashCode() {
 		return taskID.hashCode();
 	}
-	
 }

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import java.sql.Connection;
 import java.sql.Statement;
+import java.util.Date;
 
 /* Instead of repeating this logic in every test that requires use of a
 database, an abstract class will be created to centralize switching to
@@ -32,5 +33,11 @@ public abstract class BaseDBTest {
                 stmt.executeUpdate("DELETE FROM contacts");
                 stmt.executeUpdate("DELETE FROM tasks");
             }
+    }
+
+    // Resolves testing issues with static date. Ensures date created for
+    // appointment testing is always in the future.
+    protected Date futureDate(long futureMillis) {
+        return new Date(System.currentTimeMillis() + futureMillis);
     }
 }

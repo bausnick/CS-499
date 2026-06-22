@@ -1,3 +1,9 @@
+/* Author: Ben Usnick
+ * Date: 6/20/2026
+ * Course ID: CS 499 - Capstone
+ * Description: Unit Testing for the TaskDAO class.
+ */
+
 package test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,7 +33,7 @@ public class TaskDAOTest extends BaseDBTest {
 
         assertNotNull(result);
         assertEquals("123", result.getTaskID());
-        assertEquals("task1", result.getName());
+        assertEquals("Task1", result.getName());
         assertEquals("DAO Test", result.getDescription());
     }
 

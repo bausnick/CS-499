@@ -8,6 +8,7 @@
 
 package contact;
 
+import task.Task;
 import util.Validator;
 
 public class Contact {
@@ -97,5 +98,28 @@ public class Contact {
 	
 	public void setAddress(String address) {
 		this.address = Validator.validateField(address, 30, "Address");
+	}
+
+	// Contact objects are considered equal if they share a UUID. This lets
+	// comparisons between objects from database and memory to be made
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+
+		if (obj == null || getClass() != obj.getClass()) {
+			return false;
+		}
+
+		Contact other = (Contact) obj;
+		return contactID.equals(other.contactID);
+	}
+
+	// hashCode needs to be overridden when equals is overridden. This
+	// uses contactID so the objects behave correctly
+	@Override
+	public int hashCode() {
+		return contactID.hashCode();
 	}
 }

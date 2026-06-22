@@ -1,7 +1,7 @@
 /* Author: Ben Usnick
- * Date: 8/5/2025
- * Course ID: CS 320
- * Description: Tests for AppointmentService.java to ensure appropriate appointment manipulation
+ * Date: 6/20/2026
+ * Course ID: CS 499 - Capstone
+ * Description: Unit testing for AppointmentService class
  */
 
 package test;
@@ -74,8 +74,4 @@ public class AppointmentServiceTest extends BaseDBTest {
 		assertEquals(dateTest, service.getAppt(appt.getApptID()).getApptDate());
 		assertEquals("New Description", service.getAppt(appt.getApptID()).getDescription());
 	}
-
-	// ENHANCEMENT Category One - Remove testDuplicateID as the system guarentees no duplicates
-	// @Test
-	// void testDuplicateID() {}
 }

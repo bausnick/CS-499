@@ -1,7 +1,7 @@
 /* Author: Ben Usnick
- * Date: 8/5/2025
- * CourseID: CS 230
- * Description: This is the unit tests for the contact service
+ * Date: 6/20/2026
+ * Course ID: CS 499 - Capstone
+ * Description: Unit Testing for ContactService class
  */
 
 package test;
@@ -16,11 +16,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.sql.SQLException;
 
 public class ContactServiceTest {
-
-	// ENHANCMMENT Category Two
-	// Remove need for test ordering.
-	// Refactor tests by making addContact in ContactService.Java return a Contact
-	// object. This allows for use of getters and removes reliance on hardcoded tests.
 
 	@Test
 	void testAddContact() throws SQLException {
@@ -39,8 +34,6 @@ public class ContactServiceTest {
 		assertEquals("1000 First Street", contact.getAddress());
 	}
 
-	// ENHANCEMENT Category Two
-	// Test getContact method
 	@Test
 	void testGetContact() throws SQLException {
 
@@ -51,9 +44,9 @@ public class ContactServiceTest {
 			"1112223333",
 			"2000 Second Street");
 
-		// c.getContactID() to get the newly added contact. Then s.getContact performs
+		// contact.getContactID() to get the newly added contact. Then service.getContact performs
 		// the actual getContact being tested and stores it in variable "added". Then 
-		// assert that c, the created contact, is the same as the "added" contact which
+		// assert that contact, the created contact, is the same as the "added" contact which
 		// used getContact to assign values.
 		Contact added = service.getContact(contact.getContactID());
 		assertEquals(contact, added);
