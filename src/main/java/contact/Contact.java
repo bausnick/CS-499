@@ -8,7 +8,6 @@
 
 package contact;
 
-import task.Task;
 import util.Validator;
 
 public class Contact {
