@@ -1,0 +1,12 @@
+contact\ContactService.class
+util\Validator.class
+contact\ContactDAO.class
+appointment\AppointmentService.class
+task\Task.class
+database\DatabaseManager.class
+appointment\AppointmentDAO.class
+appointment\Appointment.class
+database\DatabaseInitializer.class
+task\TaskService.class
+contact\Contact.class
+task\TaskDAO.class

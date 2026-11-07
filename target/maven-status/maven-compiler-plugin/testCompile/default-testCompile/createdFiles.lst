@@ -1,0 +1,10 @@
+test\ContactTest.class
+test\TaskDAOTest.class
+test\TaskTest.class
+test\AppointmentServiceTest.class
+test\AppointmentTest.class
+test\ContactServiceTest.class
+test\AppointmentDAOTest.class
+test\ContatDAOTest.class
+test\BaseDBTest.class
+test\TaskServiceTest.class

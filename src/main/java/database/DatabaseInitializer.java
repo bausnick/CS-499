@@ -48,7 +48,8 @@ public class DatabaseInitializer {
                 stmt.execute(taskTable);
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            throw new RuntimeException("Failed to initialize database", e);
         } 
     }
 }

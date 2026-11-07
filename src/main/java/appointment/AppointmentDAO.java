@@ -116,7 +116,7 @@ public class AppointmentDAO {
                 ResultSet rs = pstmt.executeQuery();
                 if (rs.next()) {
 
-                    // Create Appointment obeject from the retrieved database values
+                    // Create Appointment object from the retrieved database values
                     return new Appointment(
                         rs.getString("appt_id"),
                         new Date(rs.getLong("appt_date")),
